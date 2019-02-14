@@ -15,5 +15,5 @@ mod test {
 
 
 pub fn parse(input: &str) -> Vec<i32> {
-    input.split("\n").map(|s| s.parse().unwrap()).collect()
+    input.lines().map(|s| s.parse().unwrap()).collect()
 }
