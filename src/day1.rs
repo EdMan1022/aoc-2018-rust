@@ -18,6 +18,30 @@ mod test {
         assert_eq!(part1(&input), output)
     }
 
+    #[test]
+    fn test_part2_1() {
+        let input = vec!(1, -1);
+        let output = 0;
+        assert_eq!(part2(&input), output)
+    }
+    #[test]
+    fn test_part2_2() {
+        let input = vec!(3, 3, 4, -2, -4);
+        let output = 10;
+        assert_eq!(part2(&input), output)
+    }
+    #[test]
+    fn test_part2_3() {
+        let input = vec!(-6, 3, 8, 5, -6);
+        let output = 5;
+        assert_eq!(part2(&input), output)
+    }
+    #[test]
+    fn test_part2_4() {
+        let input = vec!(7, 7, -2, -7, -4);
+        let output = 14;
+        assert_eq!(part2(&input), output)
+    }
 }
 
 /// Takes a vector of integers and returns the sum
@@ -41,4 +65,21 @@ pub fn part1(data: &Vec<i32>) -> i32 {
         sum += i;
     }
     sum
+}
+
+/// Finds the first repeat sum of adajecent elements in a vector
+/// 
+/// # Arguments
+/// 
+/// * `data` - a Vector of integers that can be added
+/// 
+/// # Example
+/// ```
+/// use day1::part2;
+/// let input = vec!(3, 3, 4, -2, -4)
+/// let output = part2(input);
+/// assert_eq!(output, 10)
+/// ```
+pub fn part2(data: &Vec<i32>) -> i32 {
+    42
 }
