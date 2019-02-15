@@ -3,6 +3,7 @@ use std::fs;
 
 mod argument_parser;
 mod file_parser;
+mod day1;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
