@@ -21,5 +21,17 @@ mod test {
 }
 
 pub fn part1(data: &Vec<i32>) -> i32 {
+    /// Takes a vector of integers and returns the sum
+    /// 
+    /// # Arguments
+    /// 
+    /// * `data` - a Vector of integers that can be added
+    /// 
+    /// # Example
+    /// ```
+    /// use day1::part1;
+    /// let input = vec!(1, 2, 3)
+    /// let output = part1(input);
+    /// ```
     32
 }
