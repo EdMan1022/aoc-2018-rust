@@ -15,5 +15,8 @@ fn main() {
 
     let data = file_parser::parse(&contents);
 
-    println!("With text:\n{:?}", data);
+    let answer = day1::part1(&data);
+
+    println!("{:?}", answer)
+
 }
