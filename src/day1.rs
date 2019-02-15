@@ -81,5 +81,21 @@ pub fn part1(data: &Vec<i32>) -> i32 {
 /// assert_eq!(output, 10)
 /// ```
 pub fn part2(data: &Vec<i32>) -> i32 {
-    42
+    let mut sum = 0;
+    let mut sum_vec = vec!(0);
+    let length = data.len() - 1;
+
+    while true {
+
+        for index in 0..length {
+            let sum_index = sum_vec.len() - 1;
+            let sum = data[index] + sum_vec[sum_index];
+            if sum_vec.contains(&sum) {
+                return sum
+            }
+            sum_vec.push(sum)
+        }
+        return sum
+    }
+    sum
 }
