@@ -98,22 +98,26 @@ impl Frequencies {
 /// let output = part2(input);
 /// assert_eq!(output, 10)
 /// ```
-pub fn part2(data: &Vec<i32>) -> i32 {
-    let mut sum = 0;
-    let mut sum_vec = vec!(0);
-    let length = data.len() - 1;
+pub fn part2(data: Vec<i32>) -> i32 {
 
-    while true {
+    let updated = HashSet::new();
+    let current = 0;
 
-        for index in 0..length {
-            let sum_index = sum_vec.len() - 1;
-            let sum = data[index] + sum_vec[sum_index];
-            if sum_vec.contains(&sum) {
-                return sum
+    let mut freqs = Frequencies::new(data, updated, current);
+
+    freqs.updated.insert(current);
+
+    loop {
+        for change in &freqs.changes {
+            let new = freqs.current + change;
+
+            if freqs.updated.contains(&new) {
+                return new;
             }
-            sum_vec.push(sum)
+
+            freqs.updated.insert(new);
+            freqs.current = new;
+
         }
-        return sum
     }
-    sum
 }
