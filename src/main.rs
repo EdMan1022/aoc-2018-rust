@@ -15,7 +15,7 @@ fn main() {
 
     let data = file_parser::parse(&contents);
 
-    let answer = day1::part1(&data);
+    let answer = day1::part2(data);
 
     println!("{:?}", answer)
 
