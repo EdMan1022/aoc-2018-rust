@@ -14,6 +14,6 @@ mod test {
 }
 
 
-pub fn parse(input: &str) -> Vec<i32> {
+pub fn parse(input: &str) -> Vec<String> {
     input.lines().map(|s| s.parse().unwrap()).collect()
 }
